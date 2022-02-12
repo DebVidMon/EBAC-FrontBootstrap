@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Arte&Papel</title>
+    <style>
+        /* Cores do projeto
+        #fc32d2
+        #fbff18
+        #0ce1f6
+        #26fdda
+        #fa4b80
+        #000
+        #fff
+         */
+
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .btn-ama {
+            background-color: #fbff18;
+            color: #000;
+            font-weight: 900;
+        }
+
+        .btn-rosa {
+            background-color: #fc32d2;
+            color: #000;
+            font-weight: 900;
+        }
+
+        .btn-verm {
+            background-color: #fa4b80;
+            color: #000;
+            font-weight: 900;
+        }
+
+        .btn-verde {
+            background-color: #26fdda;
+            color: #000;
+            font-weight: 900;
+        }
+
+        .btn-azul {
+            background-color: #0ce1f6;
+            color: #000;
+            font-weight: 900;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .card {
+            margin: .5rem;
+        }
+
+        #sobre .container {
+            box-shadow: 0 0 1em #fbff18;
+            padding: 1rem;
+            border-radius: .5rem;
+        }
+
+        #produtos .container {
+            box-shadow: 0 0 1em #fc32d2;
+            padding: 1rem;
+            border-radius: .5rem;
+        }
+
+        #contato .container {
+            box-shadow: 0 0 1em #0ce1f6;
+            padding: 1rem;
+            border-radius: .5rem;
+        }
+
+        .modal-content {
+            box-shadow: inset 0 0 1em #fa4b80;
+            height: 80vh;
+            overflow-y: scroll;
+        }
+
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #fff;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #fa4b80;
+            border-radius: 20px;
+            border: 3px solid #fa4b80;
+        }
+
+        .modal-title {
+            font-weight: 800;
+            color: #fa4b80;
+        }
+
+
+
+        h2 img {
+            width: auto;
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .navbar-brand img {
+            width: auto;
+            height: 3rem;
+            margin: 0 2rem;
+        }
+
+        footer {
+            padding: 2rem;
+            background-color: #fc32d2
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        td img {
+            height: 8rem;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./assets/images/papelaria.logo.png" alt="Arte&Papel"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-sm-12  mb-2 align-items-center">
+                    <img src="./assets/images/sobre.jpg" alt="imagemPapelaria" class="img-fluid">
+                </div>
+                <div class="col-md-7 col-sm-12 mb-5">
+                    <h2> <img src="./assets/images/sobrenos.png" alt="Sobre Nós"> </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero doloribus veniam incidunt
+                        reprehenderit. Itaque, culpa? Rerum, excepturi vero hic error aperiam voluptatibus qui ducimus
+                        cupiditate quod consequatur blanditiis aut.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero doloribus veniam incidunt
+                        reprehenderit. Itaque, culpa? Rerum, excepturi vero hic error aperiam voluptatibus qui ducimus
+                        cupiditate quod consequatur blanditiis aut.</p>
+                    <a class="btn btn-lg btn-ama" href="#contato">Fale conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos">
+
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col">
+
+                    <h2> <img src="./assets/images/produtos.png" alt="Produtos"> </h2>
+                    <div class="card-group">
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/Apontador.png" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Apontadores</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-1">Ver Produtos </a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/borracha.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Borrachas</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-2">Ver Produtos </a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/caneta.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Canetas</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-3">Ver Produtos </a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/canetapincel.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Canetas pincel</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-4">Ver Produtos</a>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/canetapp12.png" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Canetas Técnicas</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-5">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/grampeador.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Grampeadores</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-6">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/lapisgra.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Lápis grafite</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-7">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/lapiscor100.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Lápis de cor</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-8">Ver Produtos</a>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/marcatexto.webp" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Marca-Textos</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-9">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/pincel6.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Pincéis</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-10">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/tela.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Telas de Algodão</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-11">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/tesoura.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Tesouras</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-12">Ver Produtos</a>
+                        </div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/Aquarela.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Tintas</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-13">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/washi.png" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Fitas Adesivas</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-14">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/carvao.jpg" class="card-img" alt="...">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Grafites</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-15">Ver Produtos</a>
+                        </div>
+                        <div class="card bg-light text-dark">
+                            <img src="./assets/images/kitlettering.jpg" class="card-img" alt="kit caligrafia">
+                            <div class="card-img-top">
+                                <p class="card-title text-center">Kits Diversos</p>
+                            </div>
+                            <a class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modal-16">Ver Produtos</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="contato">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h2> <img src="./assets/images/contato.png" alt="Contato"> </h2>
+                    <p>Ficou interessado? Preencha os campos do formulário para receber uma cotação.</p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <form class="form">
+
+                        <div class="input-group">
+                            <input class="form-control mb-2" type="text" name="nome" placeholder="Digite seu nome">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control mb-2" type="text" name="email" placeholder="Digite seu email">
+                        </div>
+
+                        <div class="input-group">
+                            <textarea class="form-control mb-2" name="" rows="5"
+                                placeholder="Em que podemos lhe ajudar?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-lg btn-azul mb-3">Solicitar Cotação</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light">
+        <p>&copy; Arte&Papel. Todos os direitos reservados.</p>
+        <p><small>Desenvolvido por: Débora Videira Monteiro</small></p>
+    </footer>
+
+    <div class="modal fade" id="modal-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Apontadores</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/apontadorpeq.jpg" alt="apontador simples"></td>
+                                <td>R$ 5 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/apontadordep.jpg" alt="apontador com depósito"> </td>
+                                <td>R$ 10 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/Apontador.png" alt="apontador dois tamanhos de lápis">
+                                </td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Borrachas</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/borrachanat.jpg" alt="borracha natural"></td>
+                                <td>R$ 6 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/borrachatec.jpg" alt="borracha técnica"> </td>
+                                <td>R$ 12 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/borrachacaneta.jpg" alt="borracha caneta"> </td>
+                                <td>R$ 18 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Canetas</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <img src="./assets/images/caneta1.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 8 cada</td>
+                            </tr>
+                            <tr>
+                                <td><img src="./assets/images/caneta.png" alt="caneta bic"></td>
+                                <td>R$ 16 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/canetaapaga.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 22 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Canetas Pincel</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/canetapincel3.jpg" alt="caneta bic"></td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/canetapincel2.png" alt="caneta apagável"> </td>
+                                <td>R$ 27 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/canetapincel.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 35 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Canetas Técnica</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/canetapp6.jpg" alt="caneta bic"></td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/canetapp12.png" alt="caneta apagável"> </td>
+                                <td>R$ 27 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/canetacolorida.png" alt="caneta técnica"> </td>
+                                <td>R$ 35 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-6">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Grampeadores</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/grampeador.jpg" alt="caneta bic"></td>
+                                <td>R$ 8 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/grampeador2.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 12 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/grampeador3.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 35 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-7">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lápis Grafite</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/lapisgra.jpg" alt="caneta bic"></td>
+                                <td>R$ 8 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/lapisgrabs.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 23 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/lapiseira.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-8">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lápis de Cor</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/lapiscor12.jpg" alt="caneta bic"></td>
+                                <td>R$ 18 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/lapiscor24.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 26 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/lapiscor50.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 53 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/lapiscor100.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 99 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-9">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Marca-Textos</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/marcatexto.webp" alt="caneta bic"></td>
+                                <td>R$ 12 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/marcatextopastel.webp" alt="caneta apagável"> </td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-10">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pincéis</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/pincel4.webp" alt="caneta bic"></td>
+                                <td>R$ 8 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/pincel6.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 23 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/pincel12.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-11">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Telas de Algodão</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/tela2.jpg" alt="caneta bic"></td>
+                                <td>R$ 8 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/tela.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 23 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-12">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tesoura</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/tesoura.jpg" alt="caneta bic"></td>
+                                <td>R$ 8 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/tesouragd.webp" alt="caneta apagável"> </td>
+                                <td>R$ 23 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/tesourazz.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-13">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tintas</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/Aquarela.jpg" alt="caneta bic"></td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/aquarela36.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 50 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/Acrilica.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 80 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-14">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Fitas Adesivas</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/fita1.jpg" alt="caneta bic"></td>
+                                <td>R$ 8 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/fitadf.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 23 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/washi2.jpeg" alt="caneta técnica"> </td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-15">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Grafites</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/carvao.jpg" alt="caneta bic"></td>
+                                <td>R$ 18 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/grafiteintegral.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 23 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="modal-16">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kits Diversos</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Confira o tamanho e os preços</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="./assets/images/kitlapis.jpg" alt="caneta bic"></td>
+                                <td>R$ 8 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/kitbrush.jpg" alt="caneta apagável"> </td>
+                                <td>R$ 23 cada</td>
+                            </tr>
+                            <tr>
+                                <td> <img src="./assets/images/kitpastel.jpg" alt="caneta técnica"> </td>
+                                <td>R$ 15 cada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-verm" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
