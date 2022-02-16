@@ -22,6 +22,8 @@
 
         body {
             font-family: 'Ubuntu', sans-serif;
+            scrollbar-width: thin;
+            scrollbar-color: #fa4b80 #fac4d4;
         }
 
         .btn-ama {
@@ -87,17 +89,17 @@
         }
 
         *::-webkit-scrollbar {
-            width: 12px;
+            width: 1rem;
         }
 
         *::-webkit-scrollbar-track {
-            background: #fff;
+            background: #fac4d4;
         }
 
         *::-webkit-scrollbar-thumb {
             background-color: #fa4b80;
-            border-radius: 20px;
-            border: 3px solid #fa4b80;
+            border-radius: .8rem;
+            border: .2rem solid #fa4b80;
         }
 
         .modal-title {
@@ -105,6 +107,9 @@
             color: #fa4b80;
         }
 
+        .erro {
+            border-color: #f00;
+        }
 
 
         h2 img {
@@ -317,7 +322,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <h2> <img src="./assets/images/contato.png" alt="Contato"> </h2>
-                    <p>Ficou interessado? Preencha os campos do formulário para receber uma cotação.</p>
+                    <p>Ficou interessado? Preencha os campos do formulário para mais informações.</p>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <form class="form">
@@ -327,7 +332,8 @@
                         </div>
 
                         <div class="input-group">
-                            <input class="form-control mb-2" type="text" name="email" placeholder="Digite seu email">
+                            <input class="form-control mb-2" type="text" name="email" placeholder="Digite seu email"
+                                onkeypress="validaEmail(this)">
                         </div>
 
                         <div class="input-group">
@@ -335,7 +341,8 @@
                                 placeholder="Em que podemos lhe ajudar?"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-lg btn-azul mb-3">Solicitar Cotação</button>
+                        <button type="submit" class="btn btn-lg btn-azul mb-3" onclick="solicitar()">Solicitar
+                            Informações</button>
 
                     </form>
 
@@ -343,6 +350,26 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function validaEmail(email) {
+
+                const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
+                if (email.value.match(emailValido)) {
+                    this.classList.remove('erro');
+                    this.parentNode.classList.remove('erro');
+                } else {
+                    this.classList.add('erro');
+                    this.parentNode.classList.add('erro');
+                    return false;
+                }
+
+            }
+
+        function solicitar() {
+            alert("Sua solicitação foi enviada!")
+        }  
+    </script>
 
     <footer class="bg-light">
         <p>&copy; Arte&Papel. Todos os direitos reservados.</p>
