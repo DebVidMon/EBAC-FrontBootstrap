@@ -111,10 +111,6 @@
             border-color: #f00;
         }
 
-        .erropink {
-            background-color: #fa4b80;
-        }
-
 
         h2 img {
             width: auto;
@@ -408,38 +404,29 @@
 
                 event.preventDefault();
 
-                if (this.value == "") {
-                    this.classList.add('erro');
-                    this.parentNode.classList.add('erro');
-                    return false;
-                    preenchido2 = false;
-                } else {
-                    this.classList.remove('erro');
-                    this.parentNode.classList.remove('erro');
-                    preenchido2 = true;
-                    //const emailValido = /[A-Za-z0-9\\._-]+@[A-Za-z0-9]+\\..(\\.[A-Za-z]+)*/i;
-                    // if (email.value.match(emailValido)) {
-                    //     this.classList.remove('erro');
-                    //     this.parentNode.classList.remove('erro');
-                    //     preenchido2 = true;
-                    // } else {
-                    //     this.classList.add('erro');
-                    //     this.parentNode.classList.add('erro');
-                    //     return false;
-                    //     preenchido2 = false;
-                    // }
-                }
+                    const emailPattern = /\S+@\S+\.\S+/;
+                    var validacao = emailPattern.test(this.value); 
+
+                    if (validacao == true) {
+                        this.classList.remove('erro');
+                        this.parentNode.classList.remove('erro');
+                        preenchido2 = true;
+                    } else {
+                        this.classList.add('erro');
+                        this.parentNode.classList.add('erro');
+                        preenchido2 = false;
+                    }
                 });
 
             }
 
         function solicitar() {
-                    if (preenchido1 == false || preenchido2 == false || preenchido3 == false) {
-                        alert("Preencha todos os campos corretamente")
-                    } else {
-                        alert("Sua solicitação foi enviada!")
-                    }
-                }  
+            if (preenchido1 == false || preenchido2 == false || preenchido3 == false) {
+                alert("Preencha todos os campos corretamente")
+            } else {
+                alert("Sua solicitação foi enviada!")
+            }
+        }  
     </script>
 
     <footer class="bg-light">
