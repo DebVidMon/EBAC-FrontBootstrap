@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/985ed35f3f.js" crossorigin="anonymous"></script>
+    <title>Arte&Papel - Contato</title>
+</head>
+<body>
+
+    <section id="contato">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h2> <img src="./assets/images/contato.png" alt="Contato"> </h2>
+                    <p>Ficou interessado? Preencha os campos do formulário para mais informações.</p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <form class="form">
+
+                        <div class="input-group">
+                            <input class="form-control mb-2" type="text" name="nome" placeholder="Digite seu nome"
+                                onclick="validaNome(this)">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control mb-2" type="email" name="email" placeholder="Digite seu email"
+                                onclick="validaEmail(this)">
+                        </div>
+
+                        <div class="input-group">
+                            <textarea class="form-control mb-2" name="" rows="5"
+                                placeholder="Em que podemos lhe ajudar?" onclick="validaCampo(this)"></textarea>
+                        </div>
+
+                        <button type="submit" value='submit request' class="btn btn-lg btn-azul mb-3" onclick="return solicitar()">Solicitar
+                            Informações</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        var preenchido1 = false;
+        var preenchido2 = false;
+        var preenchido3 = false;
+
+        function validaNome(elemento) {
+
+            elemento.addEventListener('focusout', function (event) {
+
+                event.preventDefault();
+
+                if (this.value == "") {
+                    this.classList.add('erro');
+                    this.parentNode.classList.add('erro');
+                    return false;
+                } else {
+                    this.classList.remove('erro');
+                    this.parentNode.classList.remove('erro');
+                    preenchido1 = true;
+                }
+
+            });
+
+        }
+
+        function validaCampo(elemento) {
+
+            elemento.addEventListener('focusout', function (event) {
+
+                event.preventDefault();
+
+                if (this.value == "") {
+                    this.classList.add('erro');
+                    this.parentNode.classList.add('erro');
+                    return false;
+                } else {
+                    this.classList.remove('erro');
+                    this.parentNode.classList.remove('erro');
+                    preenchido3 = true;
+                }
+
+            });
+
+        }
+
+        function validaEmail(email) {
+
+            email.addEventListener('focusout', function (event) {
+
+                event.preventDefault();
+
+                    const emailPattern = /\S+@\S+\.\S+/;
+                    var validacao = emailPattern.test(this.value); 
+
+                    if (validacao == true) {
+                        this.classList.remove('erro');
+                        this.parentNode.classList.remove('erro');
+                        preenchido2 = true;
+                    } else {
+                        this.classList.add('erro');
+                        this.parentNode.classList.add('erro');
+                        return false;
+                        preenchido2 = false;
+                    }
+                });
+
+            }
+
+        function solicitar() {
+            if (preenchido1 == false || preenchido2 == false || preenchido3 == false) {
+                alert("Preencha todos os campos corretamente");
+                return false;
+            } else {
+                alert("Sua solicitação foi enviada!");
+            }
+        }  
+    </script>
+    
+</body>
+</html>
