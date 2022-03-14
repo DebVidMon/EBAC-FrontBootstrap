@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/bootstrap/css/apersonalizado.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/985ed35f3f.js" crossorigin="anonymous"></script>
     <title>Arte&Papel - Contato</title>
 </head>
@@ -22,17 +23,18 @@
 
                         <div class="input-group">
                             <input class="form-control mb-2" type="text" name="nome" placeholder="Digite seu nome"
-                                onclick="validaNome(this)">
+                                onclick="validaNome(this)" required
+                                >
                         </div>
 
                         <div class="input-group">
                             <input class="form-control mb-2" type="email" name="email" placeholder="Digite seu email"
-                                onclick="validaEmail(this)">
+                                onclick="validaEmail(this)"required>
                         </div>
 
                         <div class="input-group">
                             <textarea class="form-control mb-2" name="" rows="5"
-                                placeholder="Em que podemos lhe ajudar?" onclick="validaCampo(this)"></textarea>
+                                placeholder="Em que podemos lhe ajudar?" onclick="validaCampo(this)"required></textarea>
                         </div>
 
                         <button type="submit" value='submit request' class="btn btn-lg btn-azul mb-3" onclick="return solicitar()">Solicitar
