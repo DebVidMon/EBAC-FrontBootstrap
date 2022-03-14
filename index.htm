@@ -342,7 +342,7 @@
                                 placeholder="Em que podemos lhe ajudar?" onclick="validaCampo(this)"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-lg btn-azul mb-3" onclick="solicitar()">Solicitar
+                        <button type="submit" value='submit request' class="btn btn-lg btn-azul mb-3" onclick="return solicitar()">Solicitar
                             Informações</button>
 
                     </form>
@@ -414,6 +414,7 @@
                     } else {
                         this.classList.add('erro');
                         this.parentNode.classList.add('erro');
+                        return false;
                         preenchido2 = false;
                     }
                 });
@@ -422,9 +423,10 @@
 
         function solicitar() {
             if (preenchido1 == false || preenchido2 == false || preenchido3 == false) {
-                alert("Preencha todos os campos corretamente")
+                alert("Preencha todos os campos corretamente");
+                return false;
             } else {
-                alert("Sua solicitação foi enviada!")
+                alert("Sua solicitação foi enviada!");
             }
         }  
     </script>
