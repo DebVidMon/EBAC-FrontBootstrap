@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,41 +10,130 @@
     <script src="https://kit.fontawesome.com/985ed35f3f.js" crossorigin="anonymous"></script>
     <title>Arte&Papel - Contato</title>
 </head>
+
 <body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./assets/images/papelaria.logo.png" alt="Arte&Papel"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link" href="./index.html#sobre">Sobre</a>
+                        <a class="nav-link" href="./index.html#produtos">Produtos</a>
+                        <a class="nav-link" href="#">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <section id="contato">
         <div class="container mt-5 mb-5">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <h2> <img src="./assets/images/contato.png" alt="Contato"> </h2>
-                    <p>Ficou interessado? Preencha os campos do formulário para mais informações.</p>
+
+            <h2> <img src="./assets/images/contato.png" alt="Contato"> </h2>
+            <p><b>Ficou interessado? Preencha os campos do formulário para mais informações.</b></p>
+            <form class="form">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12">
+
+                        <div class="input-group row">
+                            <div class="col">
+                                <label for="Nome" class="col-form-label">Nome</label>
+                                <input class="form-control mb-2" type="text" name="nome" placeholder="Digite seu nome"
+                                    onclick="validaNome(this)" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group row">
+                            <div class="col">
+                                <label for="Nome" class="col-form-label">Email</label>
+                                <input class="form-control mb-2" type="text" name="email" placeholder="Digite seu email"
+                                    onclick="validaEmail(this)" required>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+
+                        <div class="input-group row">
+                            <div class="col">
+                                <label for="endereco" class="col-form-label">Endereço
+                                    completo</label>
+                                <input type="text" id="endereco" class="form-control mb-2" placeholder="Endereço completo">
+                            </div>
+                        </div>
+
+                        <div class="input-group row">
+                            <div class="col">
+                                <label for="cidade" class="col-form-label">Cidade</label>
+                                <input type="text" name="cidade" id="cidade" class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="estado" class="col-form-label">Estado</label>
+                                <select name="estado" id="estado" class="form-control">
+                                    <option value="">Selecione</option>
+                                    <option value="ac">AC</option>
+                                    <option value="al">AL</option>
+                                    <option value="ap">AP</option>
+                                    <option value="am">AM</option>
+                                    <option value="ba">BA</option>
+                                    <option value="ce">CE</option>
+                                    <option value="df">DF</option>
+                                    <option value="es">ES</option>
+                                    <option value="go">GO</option>
+                                    <option value="ma">MA</option>
+                                    <option value="mg">MG</option>
+                                    <option value="mg">MS</option>
+                                    <option value="mg">MT</option>
+                                    <option value="pa">PA</option>
+                                    <option value="mg">PB</option>
+                                    <option value="pe">PE</option>
+                                    <option value="pi">PI</option>
+                                    <option value="pr">PR</option>
+                                    <option value="mg">RJ</option>
+                                    <option value="rn">RN</option>
+                                    <option value="ro">RO</option>
+                                    <option value="rr">RR</option>
+                                    <option value="sc">SC</option>
+                                    <option value="se">SE</option>
+                                    <option value="sp">SP</option>
+                                    <option value="to">TO</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="cep" class="col-form-label">CEP</label>
+                                <input type="text" name="cep" id="cep" class="form-control mb-2" onkeypress="mask(this,mcep)">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-sm-12">
-                    <form class="form">
-
-                        <div class="input-group">
-                            <input class="form-control mb-2" type="text" name="nome" placeholder="Digite seu nome"
-                                onclick="validaNome(this)" required
-                                >
+                <div class="row justify-content-center">
+                    <div class="input-group row">
+                        <div class="col">
+                            <label for="Nome" class="col-form-label">Texto</label>
+                            <textarea class="form-control mb-3" name="texto" rows="5"
+                                placeholder="Em que podemos lhe ajudar?" onclick="validaCampo(this)"
+                                required></textarea>
                         </div>
+                    </div>
 
-                        <div class="input-group">
-                            <input class="form-control mb-2" type="email" name="email" placeholder="Digite seu email"
-                                onclick="validaEmail(this)"required>
-                        </div>
-
-                        <div class="input-group">
-                            <textarea class="form-control mb-2" name="" rows="5"
-                                placeholder="Em que podemos lhe ajudar?" onclick="validaCampo(this)"required></textarea>
-                        </div>
-
-                        <button type="submit" value='submit request' class="btn btn-lg btn-azul mb-3" onclick="return solicitar()">Solicitar
-                            Informações</button>
-
-                    </form>
-
+                    <button type="submit" value='submit request' class="btn btn-lg btn-azul mb-3"
+                        onclick="return solicitar()">Solicitar
+                        Informações</button>
                 </div>
-            </div>
+
+            </form>
+
+        </div>
+        </div>
         </div>
     </section>
 
@@ -99,22 +189,39 @@
 
                 event.preventDefault();
 
-                    const emailPattern = /\S+@\S+\.\S+/;
-                    var validacao = emailPattern.test(this.value); 
+                const emailPattern = /\S+@\S+\.\S+/;
+                var validacao = emailPattern.test(this.value);
 
-                    if (validacao == true) {
-                        this.classList.remove('erro');
-                        this.parentNode.classList.remove('erro');
-                        preenchido2 = true;
-                    } else {
-                        this.classList.add('erro');
-                        this.parentNode.classList.add('erro');
-                        return false;
-                        preenchido2 = false;
-                    }
-                });
+                if (validacao == true) {
+                    this.classList.remove('erro');
+                    this.parentNode.classList.remove('erro');
+                    preenchido2 = true;
+                } else {
+                    this.classList.add('erro');
+                    this.parentNode.classList.add('erro');
+                    return false;
+                    preenchido2 = false;
+                }
+            });
 
-            }
+        }
+
+        function mask(objeto,mascara){
+    obj = objeto;
+    maskara = mascara;
+    setTimeout("exemask()",1);
+}
+
+function exemask(){
+    obj.value = maskara(obj.value);
+}
+
+function mcep(cep){
+    cep = cep.replace(/\D/g,'');
+    cep = cep.replace(/^(\d{5})(\d{3})$/,'$1-$2');
+    console.log(cep);
+    return cep;
+}
 
         function solicitar() {
             if (preenchido1 == false || preenchido2 == false || preenchido3 == false) {
@@ -125,6 +232,7 @@
             }
         }  
     </script>
-    
+
 </body>
+
 </html>

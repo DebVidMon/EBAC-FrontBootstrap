@@ -33,8 +33,8 @@
         </nav>
     </header>
 
-    <section>
-        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+    <section id="carrossel">
+        <div id="carrossel" class="container carousel carousel-dark slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
                 <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
@@ -42,13 +42,22 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <img src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide">
+                    <img class="d-block w-60" src="./assets/images/carrossel-papelaria.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Material de papelaria</h5>
+                      </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide">
+                <div class="carousel-item ">
+                    <img class="d-block w-60" src="./assets/images/carrossel-tinta.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ou material artístico</h5>
+                      </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="holder.js/900x500/auto/#666:#444/text:Third slide" alt="Third slide">
+                <div class="carousel-item ">
+                    <img class="d-block w-60" src="./assets/images/carrossel-lapiscor.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Para todas as idades</h5>
+                      </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -76,7 +85,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero doloribus veniam incidunt
                         reprehenderit. Itaque, culpa? Rerum, excepturi vero hic error aperiam voluptatibus qui ducimus
                         cupiditate quod consequatur blanditiis aut.</p>
-                    <a class="btn btn-lg btn-ama" href="#contato">Fale conosco</a>
+                    <a class="btn btn-lg btn-ama" href="./form.html">Fale conosco</a>
                 </div>
             </div>
         </div>
@@ -215,6 +224,12 @@
         </div>
 
     </section>
+
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <a class="btn btn-lg btn-verde" href="./form.html">Entre em contato</a>
+        </div>
+    </div>
 
 
     

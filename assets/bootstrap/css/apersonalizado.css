@@ -15,6 +15,26 @@
              scrollbar-width: thin;
              scrollbar-color: #fa4b80 #fac4d4;
          }
+
+         h5{
+             font-weight: bolder;
+             font-size: 2rem;
+             text-shadow: 0 0 .3rem #fff, 0 0 .3rem #fff, 0 0 .3rem #fff;
+         }
+
+         img{
+             align-self: center;
+         }
+
+         /* .carousel-caption{
+            box-shadow: 0 0 2rem #26fdd950;
+            background-color: #26fdd950;
+            border-radius: 20px;
+         } */
+
+         .w-60{
+             margin: 0 18.5%; 
+        }
  
          .btn-ama {
              background-color: #fbff18;
@@ -44,6 +64,10 @@
              background-color: #0ce1f6;
              color: #000;
              font-weight: 900;
+         }
+
+         .btn {
+             width: 20rem;
          }
  
          p {
