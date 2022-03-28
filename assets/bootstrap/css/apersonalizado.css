@@ -157,6 +157,12 @@
              width: auto;
          }
 
+         @media (max-width: 896px) {
+            #carrossel{
+                width: 100%;
+            }
+         }
+
          @media (max-width: 768px) {
              #carrossel{
                  width: 100%;
